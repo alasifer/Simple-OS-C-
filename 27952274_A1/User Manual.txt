@@ -1,0 +1,52 @@
+Author: AHMED ABDULWAHID OMAR ALASAIFER
+Student ID: 27952274
+
+
+USER MANUAL:
+
+The first file task1shell27952274.c is made to preform the following command:
+- list all files in current directory
+- move to other directories
+- display the content of text file with size less than 500kb
+
+The user can preform these commands by entering special characters as follows:
+- "d:" followed by name of the directory 
+	- ".." can be used to access the parent directory 
+- "x:" followed by the executable file name to be executed
+- "v:" followed by the file name to be displayed
+- "q" to quit the program
+
+Notes:
+- if a file name with size more than 500kb an error message will be displayed
+- if the user does not have the permission to enter the direcroty an error message will be printed
+
+ 
+The first file task2shell27952274.c is made to preform the following command:
+- Display the content of the current directory in grapgic 
+- allow the user to interact by clicking on the file icons and each file will act accordingly:
+	* if it is a directory, it will move to that directory
+	* if it is a text file (less than 500kb), it will display the content in a new window
+	* if it is an executanle file, that file will be executed.
+- An arrow with word (Go back) to allow the user to move to the parent directory
+- An error message will appear for one second if the system can not display the content of the selected file
+- An error message will appear for one second if the user does not have a permission to enter a directory
+
+The first file task3shell27952274.c is made to preform the following command:
+- Aside from the main functionality implemented in task2, the user can check the file size by preforming a rigth-click on the intended file 
+and dsiplay permission for each user category.
+
+Bugs:
+- 'invalid' sign appears when trying to display infos about some files
+
+Code Style:
+ - program is based on the MAIN function and another function used to list the files in current directory.
+ - A while loop is used to keep asking the user about eh next command and based on the input the correct IF Statement inside the loop
+will be executed
+ - To determine file type, the octal code permission of each file is used as follows:
+	- if the file octal code is with length of 5 and first number is 4, it is a directory
+	- if the file octal code is with length of 7 and third number is 7, it is an executable file
+	- else it is a text file
+ - "." is used to remove any hidden files from being displayed
+ - Fseek function is used to determine the size of the filr by setting the descriptor at the end, and use ftell() 
+to get the size
+
